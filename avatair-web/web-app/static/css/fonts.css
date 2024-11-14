@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* @font-face {
+    : "Rubik", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+} */
+
+@font-face {
+    font-family: "kiwi-maru";
+    font-style: normal;
+    src:
+        url('/fonts/KiwiMaru-Regular.woff') format("woff");
+}
+
+@font-face {
+    font-family: "nats";
+    font-style: normal;
+    src:
+        url('/fonts/NATS-Regular.woff') format("woff");
+}
+
+@font-face {
+    font-family: "karla";
+    font-style: normal;
+    src:
+        url('/fonts/Karla-VariableFont_wght.woff') format("woff");
+}
+
+@font-face {
+    font-family: "karla";
+    font-style: italic;
+    src:
+        url('/fonts/Karla-VariableFont_wght.woff') format("woff");
+}
+
+* {
+    font-family: "Rubik", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+h1,
+h2 {
+    /* font-family: "Rubik",sans-serif; */
+    font-weight: 400;
+}
+
+p {
+    font-family: "Rubik";
+}
+
+a {
+    font-family: "Rubik";
+    color: #909CFF;
+}
+
+.error-text {
+    font-size: 20px;
+    color: #C20000;
+    text-align: center;
+    margin: 10px;
+}
+
+.info-text {
+    font-size: 20px;
+    color: #d1a700;
+    text-align: center;
+    margin: 10px;
+}

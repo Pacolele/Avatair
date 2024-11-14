@@ -1,0 +1,30 @@
+table {
+    font-family: inherit;
+    text-align: left;
+    border-spacing: 5px;
+    table-layout: fixed;
+    width: 50%;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+th {
+    width: 100%;
+    background-color: var(--avatair-blue);
+    color: white;
+}
+
+td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--avatair-blue-pastel-2);
+}
+
+tr:hover td:not(.button) {
+    background-color: var(--avatair-blue-pastel);
+    cursor: pointer;
+}

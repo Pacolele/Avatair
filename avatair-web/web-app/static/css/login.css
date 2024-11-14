@@ -1,0 +1,89 @@
+.gradient-element {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+
+    background: linear-gradient(0deg, #83BBFD 0%, #222FA8 100%);
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-bottom: 80px;
+    width: 60%;
+}
+
+.title>h1 {
+    line-height: 60px;
+}
+
+.login-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    width: 40%;
+    padding: 30px;
+}
+
+.login-container>h1 {
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#form>a {
+    margin: 10px 0 0 10px;
+    font-size: 18px;
+}
+
+label {
+    font-family: inherit;
+    font-size: 24px;
+}
+
+input {
+    border: none;
+    border-bottom: solid;
+    border-color: #909CFF;
+    font-size: 18px;
+    padding: 8px 0 8px 0;
+}
+
+.buttons-element {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .gradient-element {
+        display: block;
+        margin-top: -60%;
+    }
+
+    .gradient-element .clouds:not(:first-child) {
+        display: none;
+    }
+
+    .gradient-element .clouds {
+        transform: rotate(90deg);
+        height: 100vw;
+    }
+
+    .login-container {
+        width: 100vw;
+        height: 60vh;
+        justify-content: start;
+    }
+}

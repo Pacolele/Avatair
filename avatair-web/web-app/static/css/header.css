@@ -1,0 +1,81 @@
+header {
+    background: linear-gradient(270deg, #83BBFD 0%, #222FA8 100%);
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header h1 {
+    font-family: inherit;
+    color: white;
+    padding-left: 30px;
+    letter-spacing: 1vw;
+    font-size: 40px;
+    line-height: 110px;
+    height: 110px;
+    color: white;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+}
+
+header>div {
+    height: 100%;
+    padding: 0 50px 0 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .button {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    width: 225px;
+}
+
+#responsive-icon {
+    display: none;
+}
+
+.container-row {
+    margin: 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-column {
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 1026px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header>div {
+        width: 110px;
+    }
+
+    header .button {
+        display: none;
+        line-height: 100%;
+    }
+
+    header .clouds {
+        display: none;
+    }
+
+    #responsive-icon {
+        display: block;
+    }
+}

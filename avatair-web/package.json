@@ -1,0 +1,25 @@
+{
+  "name": "avatair-web",
+  "version": "1.0.0",
+  "description": "## Dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "_installAPI": "cd nestjs && npm i",
+    "_installGUI": "cd web-app && npm i",
+    "install": "npm run _installAPI && npm run _installGUI",
+    "_buildAPI": "cd nestjs && npm run build",
+    "_buildGUI": "cd web-app && npm run build",
+    "build": "npm run _buildAPI && npm run _buildGUI",
+    "_docker-buildAPI": "cd nestjs && npm run docker-build",
+    "_docker-buildGUI": "cd web-app && npm run docker-build",
+    "docker-build": "npm run _docker-buildAPI && npm run _docker-buildGUI",
+    "docker-deploy": "docker compose up -d",
+    "deploy": "npm run install && npm run build && npm run docker-build && npm run docker-deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}

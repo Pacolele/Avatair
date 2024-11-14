@@ -1,0 +1,125 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <div class="mermaid">
+    
+        classDiagram
+          class AvatarGenerator {
+            pipeline : NoneType
+            time_logging : bool
+            generate_image_from_prompt(prompt, log_picture)
+          }
+          class Bo {
+            BATCH_SIZE : int
+            candidates : list[Parist]
+            compSpace
+            dimensions : list
+            prompter
+            rating_scale : range
+            get_optimal_image() str
+            get_prompts() list[str]
+            optimize(ratings: list[float]) list[str]
+            plot()
+          }
+          class Bo {
+            detAQF(best_f, model)
+            infer() List[float]
+            probAQF(best_f, model)
+          }
+          class ComputeList {
+            normalized
+            values
+            to_dataframe()
+          }
+          class ComputeSpace {
+            normalized
+            x
+            xdim
+            y
+            ydim
+            add_value(xs: List, ys: List, axis)
+            add_values(xs: List[List], ys: List[List], axis)
+            clear_data()
+            denormalize(value)
+            to_computeList(l: List[List], dim: List[Dimension], update: Optional[ComputeList])
+          }
+          class Dimension {
+            denorm(v)* Parameter
+            new(value)* Parameter
+          }
+          class DiscreteDimension {
+            denorm(v: float) Parameter
+            new(value) Parameter
+          }
+          class DiscreteNormalizer {
+            denormalize(normalized_value: Float01)
+            normalize(value) Float01
+          }
+          class Float01 {
+            get_max_dist(num)
+          }
+          class IdentityNormalizer {
+            denormalize(value: Float01) any
+            normalize(value: any) Float01
+          }
+          class Normalizer {
+            denormalize()* any
+            normalize()* Float01
+          }
+          class NumericDimension {
+            denorm(v: float) Parameter
+            new(value: float) Parameter
+          }
+          class NumericNormalizer {
+            denormalize(normalized_value: Float01)
+            normalize(value: float) Float01
+          }
+          class OptimizeFor {
+            name
+          }
+          class ParamList {
+            normalized
+            values
+            to_dataframe()
+          }
+          class Parameter {
+            normalized
+            value
+            normalized_distance(target_param) Float01
+            to_dataframe()
+          }
+          class Prompter {
+            keys : list
+            prompt
+            values
+            generate_prompt(data)
+            value_to_string(value, variable_values)
+          }
+          class User {
+            BO_instance
+            iteration : int
+            last_time_accessed : datetime
+            user_id : str
+            get_BO_instance() Bo
+            get_iteration() int
+            get_last_time_accessed() datetime
+            get_prompts() list[str]
+            get_result() str
+            get_user_id() str
+            run_optimize(ratings: list) None
+            update_last_time_accessed() None
+          }
+          DiscreteDimension --|> Dimension
+          NumericDimension --|> Dimension
+          DiscreteNormalizer --|> Normalizer
+          IdentityNormalizer --|> Normalizer
+          NumericNormalizer --|> Normalizer
+          ComputeList --* ComputeSpace : _x_data
+          ComputeList --* ComputeSpace : _x_data
+          ComputeList --* ComputeSpace : _y_data
+          ComputeList --* ComputeSpace : _y_data
+          OptimizeFor --o NumericNormalizer : _opt
+  
+       </div>
+  </body>
+</html>

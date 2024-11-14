@@ -1,0 +1,56 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  avatair-gui:
+    image: avatair-gui:latest
+    container_name: avatair-gui
+    ports:
+      - '127.0.0.1:5555:3000'
+    env_file:
+      - .env
+    #environment:
+    #  - PUBLIC_BACKEND_API_URL=http://localhost:3000
+      
+
+  avatair-api:
+    image: avatair-api:latest
+    container_name: avatair-api
+    ports:
+      - '127.0.0.1:3000:3000'
+    env_file:
+      - .env
+    #environment:
+    #  - PORT=3000
+    #  - JWT_SECRET="CHANGEME"
+    #  - AES_SECRET="CHANGEME"
+    #  - JWT_ACCESS_SECRET=CHANGEME
+    #  - JWT_REFRESH_SECRET=CHANGEME
+    #  - DBHOST=mongo
+    #  - DBUSERNAME=root
+    #  - DBPASSWORD=changemetobethesame
+  
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    container_name: avatair-mongo
+    env_file:
+      - .env
+    #environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: changemetobethesame
+    #volumes:
+    #  - ./dbdata:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: avatair-mongoexpress
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:8081:8081'      
+    env_file:
+      - .env
+    #environment:
+    #  ME_CONFIG_MONGODB_URL: mongodb://root:changemetobethesame@mongo:27017/
+  

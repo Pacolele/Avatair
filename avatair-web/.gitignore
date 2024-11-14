@@ -1,0 +1,6 @@
+/dbdata
+/nestjs/test/docker/db/datadb/
+/node_modules
+/node-modules
+/package-lock.json
+/.env

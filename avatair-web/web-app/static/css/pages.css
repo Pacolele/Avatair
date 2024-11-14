@@ -1,0 +1,45 @@
+.pages{
+    width: 1080px;
+    height: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.pages button {
+    margin: 25px;
+}
+
+.pages hr{
+    color: rgba(0, 0, 0, 0.25);
+    width: 1080px;
+    margin-left: -40px;
+}
+
+hr{
+    color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    margin-left: -40px;
+}
+
+.txtbox-title{
+    width: 1000px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    font-size: 18px;
+}
+
+.txtbox-content{
+
+    width: 1000px;
+    height: max-content;
+    font-size: 16px;
+    resize: none;
+}
+
+#button-fixed{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
